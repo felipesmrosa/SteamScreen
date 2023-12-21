@@ -1,0 +1,51 @@
+@import "../colors.scss";
+
+.rodape {
+  position: fixed;
+  top: 55.1rem;
+  background: $cinzaRodape;
+  width: 100%;
+  color: $text;
+  @extend %displayFlex;
+  justify-content: space-between;
+  padding: 1rem;
+
+  &__adicionar {
+    cursor: pointer;
+    @extend %displayFlex;
+
+    p {
+      font-size: 0.875rem;
+    }
+
+    &--squarePlus {
+      font-size: 2rem;
+    }
+  }
+  &__downloads {
+    cursor: pointer;
+    @extend %displayFlex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 0.35rem;
+    &--gerenciar {
+      font-size: 0.7rem;
+    }
+  }
+  &__amigos {
+    cursor: pointer;
+    @extend %displayFlex;
+    gap: 0.25rem;
+    &--break {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      p {
+        font-size: 0.9rem;
+      }
+    }
+    &--icone {
+      font-size: 2rem;
+    }
+  }
+}

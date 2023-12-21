@@ -1,35 +1,96 @@
 @import "../colors.scss";
 
+%displayFlex {
+  display: flex;
+  align-items: center;
+}
+
 .menu {
   background-color: $cinzaEscuro;
   color: $cinzaClaro;
   padding: 0.5rem 1rem;
-  display: flex;
-  align-items: center;
+  @extend %displayFlex;
   justify-content: space-between;
 
   &__lista {
-    display: flex;
-    align-items: center;
+    @extend %displayFlex;
     list-style: none;
     gap: 1.5rem;
     font-size: 0.875rem;
+
+    &--item {
+      cursor: pointer;
+    }
   }
 
   &__biblioteca {
     &--lista {
       list-style: none;
-      display: flex;
-      align-items: center;
+      @extend %displayFlex;
+      justify-content: end;
+      gap: 2rem;
+
+      li {
+        color: $brancoEscuro;
+        cursor: pointer;
+      }
+
+      &--icone {
+        @extend %displayFlex;
+        justify-content: center;
+        background: $azul;
+        padding: 0.3rem 1rem;
+        border-radius: 4px;
+        font-weight: 700;
+        color: #333;
+      }
 
       &--perfil {
-        display: flex;
-        align-items: center;
+        @extend %displayFlex;
+        width: 19%;
+        justify-content: center;
+        gap: 0.5rem;
+
+        p {
+          color: $azul;
+        }
       }
     }
 
     img {
-      width: 3%;
+      width: 16%;
+      border: 2px solid $azul;
+    }
+  }
+  &__embaixo {
+    background-color: #212428;
+    width: 100%;
+    @extend %displayFlex;
+    justify-content: start;
+    padding: 0.35rem 1rem;
+
+    &--setas {
+      @extend %displayFlex;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+      color: #4f4f4f;
+      cursor: pointer;
+    }
+
+    &--nav {
+      @extend %displayFlex;
+      color: $brancoEscuro;
+      gap: 1.25rem;
+      margin-left: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      &--destaque {
+        color: $branco;
+        text-shadow: 0px 0px 10px $branco;
+        font-weight: 400;
+      }
     }
   }
 }

@@ -1,0 +1,86 @@
+.containerJogos {
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 8px; /* width of the entire scrollbar */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $cinza; /* color of the tracking area */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: blue; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 3px solid orange; /* creates padding around scroll thumb */
+  }
+  &__atualizacoes {
+    background-color: $cinza;
+    padding: 1rem 2rem;
+    &--header {
+      @extend %displayFlex;
+      gap: 0.9rem;
+
+      h3 {
+        color: $text;
+        font-weight: 400;
+        letter-spacing: 3px;
+      }
+    }
+    &--iconeAtivo {
+      color: $text;
+    }
+    &--iconeApagado {
+      color: $cinzaClaro;
+    }
+    svg {
+      font-size: 2.5rem;
+    }
+    &--linha {
+      background-color: $cinzaClaro;
+      width: 71.8%;
+      height: 0.2rem;
+      border-radius: 24px;
+    }
+
+    &__map {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      &__conteudo {
+        display: flex;
+        flex-direction: column;
+        &--modificacao {
+          color: $text;
+        }
+        &--imagem {
+          width: 38.5vh;
+          border-radius: 4px;
+        }
+        &--descricao {
+          color: #d6d6d6;
+          letter-spacing: 1px;
+          margin-bottom: 0rem;
+        }
+        &--postagem {
+          @extend %displayFlex;
+          &--logo {
+            width: 2.5vh;
+            height: 2.5vh;
+            border-radius: 4px 0px 0px 4px;
+          }
+          &--autor {
+            @extend %displayFlex;
+            background-color: $cinzaClaro;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0px 4px 4px 0px;
+            color: $text;
+            font-weight: 300;
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+}

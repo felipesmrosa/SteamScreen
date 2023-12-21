@@ -1,0 +1,47 @@
+.container {
+  &--title {
+    @extend %displayFlex;
+    margin: 0.5rem 0;
+    color: $text;
+    font-weight: 600;
+
+    p {
+      font-size: 0.75rem;
+      margin-left: 0.5rem;
+      color: $cinzaClaro;
+    }
+  }
+  &__jogos {
+    height: 66vh;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 6px; /* width of the entire scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #2c2f34; /* color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $cinza; /* color of the scroll thumb */
+      border-radius: 20px; /* roundness of the scroll thumb */
+    }
+    &--lista {
+      @extend %displayFlex;
+      list-style: none;
+      padding: 0.2rem 1rem;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+    &--imagem {
+      width: 2.5vh;
+      height: 2.5vh;
+      border-radius: 4px;
+    }
+    &--nome {
+      text-transform: uppercase;
+      font-size: 1rem;
+      color: $text;
+    }
+  }
+}

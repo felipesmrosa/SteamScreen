@@ -1,8 +1,23 @@
 // Parte do Header
 @import "./imports/header";
 
+// Parte da Lista de Jogos
+@import "./imports/listadejogos";
+
+// Parte de Jogos Jogados Recentemente
+@import "./imports/jogosrecentes";
+
+// Parte Jogado Recentemente e Atualizações
+@import "./imports/jogadorecentemente";
+
+// Parte dos Jogos
+@import "./imports/jogos";
+
+// Parte do Rodapé
+@import "./imports/_footer";
+
 // Variaveis de Cores
 @import "./colors.scss";
 
 //Definições globais
-@import "./globa.scss";
+@import "./global.scss";
